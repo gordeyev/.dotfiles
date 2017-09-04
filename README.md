@@ -1,6 +1,11 @@
- Copy tmux config to home:
+Copy tmux config to home:
 
 ```bash
-ln -s ~/.tmux/.tmux.conf ~/.tmux.conf
+ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
+```
+
+Copy zsh config to home:
+```bash
+ln -s ~/.dotfiles/zshrc ~/.zshrc
 ```
 
