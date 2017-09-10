@@ -2,6 +2,10 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+eval $(thefuck --alias)
+# You can use whatever you want as an alias, like for Mondays:
+eval $(thefuck --alias FUCK)
+
 tmux a
 export ZSH=/Users/gordeyev/.oh-my-zsh
 alias vi="nvim"
@@ -12,7 +16,9 @@ export DJANGO_SETTINGS_MODULE=swish_project.settings
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bureau"
+
+# ln -s ~/.dotfiles/oh-my-zsh/themes/gordeyev.zsh-theme ~/.oh-my-zsh/themes/gordeyev.zsh-theme
+ZSH_THEME="gordeyev"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
