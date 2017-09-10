@@ -34,10 +34,13 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 call neobundle#end()
 call neobundle#begin()
-NeoBundle 'joshdick/onedark.vim'
-NeoBundle 'mhartington/oceanic-next'
+"NeoBundle 'joshdick/onedark.vim'
+"NeoBundle 'mhartington/oceanic-next'
 NeoBundle 'myusuf3/numbers.vim'
-NeoBundle 'altercation/vim-colors-solarized'
+"NeoBundle 'altercation/vim-colors-solarized'
+"NeoBundle 'nlknguyen/papercolor-theme'
+"NeoBundle 'kristijanhusak/vim-hybrid-material'
+NeoBundle 'w0ng/vim-hybrid'
 call neobundle#end()
 
 " My Bundles here:
@@ -50,12 +53,29 @@ call neobundle#end()
 NeoBundleCheck
 
 syntax on
-let g:oceanic_next_terminal_bold = 1
-let g:oceanic_next_terminal_italic = 1
-colorscheme OceanicNext
-"syntax on
+
+"let g:oceanic_next_terminal_bold = 1
+"let g:oceanic_next_terminal_italic = 1
+"colorscheme OceanicNext
+
 "colorscheme onedark
 "syntax enable
 "set background=dark
 "colorscheme solarized
+
+"set background=dark
+"colorscheme PaperColor
+
+"let g:enable_bold_font = 1
+"let g:enable_italic_font = 1
+"set background=dark
+"colorscheme hybrid_material
+
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
+set background=dark
+colorscheme hybrid
+
+
 hi Normal ctermbg=none
+
