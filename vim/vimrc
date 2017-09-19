@@ -41,6 +41,8 @@ NeoBundle 'gordeyev/vim-hybrid'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'junegunn/fzf'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'xuyuanp/nerdtree-git-plugin'
 call neobundle#end()
 
 " My Bundles here:
@@ -78,4 +80,13 @@ colorscheme hybrid
 
 
 hi Normal ctermbg=none
+
+" NerdTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
