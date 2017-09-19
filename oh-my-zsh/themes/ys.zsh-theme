@@ -1,4 +1,9 @@
+# Clean, simple, compatible and meaningful.
+# Tested on Linux, Unix and Windows under ANSI colors.
 # It is recommended to use with a dark background.
+# Colors: black, red, green, yellow, *blue, magenta, cyan, and white.
+#
+# Mar 2013 Yad Smood
 
 # VCS
 YS_VCS_PROMPT_PREFIX1=" %{$fg[white]%}on%{$reset_color%} "
@@ -33,7 +38,6 @@ ys_hg_prompt_info() {
 local exit_code="%(?,,C:%{$fg[red]%}%?%{$reset_color%})"
 
 # Prompt format:
-# Note: need fix
 #
 # PRIVILEGES USER @ MACHINE in DIRECTORY on git:BRANCH STATE [TIME] C:LAST_EXIT_CODE
 # $ COMMAND
@@ -43,23 +47,14 @@ local exit_code="%(?,,C:%{$fg[red]%}%?%{$reset_color%})"
 # % ys @ ys-mbp in ~/.oh-my-zsh on git:master x [21:47:42] C:0
 # $
 PROMPT="
-%{$fg[white]%}%* \
+%{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
 %(#,%{$bg[yellow]%}%{$fg[black]%}%n%{$reset_color%},%{$fg[cyan]%}%n) \
+%{$fg[white]%}@ \
+%{$fg[green]%}%m \
 %{$fg[white]%}in \
-%{$terminfo[bold]\
-%{$reset_color%}\
-$fg[yellow]%}%~%{$reset_color%}\
-${hg_info}\
+%{$terminfo[bold]$fg[yellow]%}%~%{$reset_color%}\
 ${hg_info}\
 ${git_info}\
-\
- $exit_code
-%{$terminfo[bold]\
-%{$reset_color%}\
-\
-$bg[black]$fg[green]%}$ \
-\
-%{$reset_color%}\
-%{$fg[black]%} \
-%{$reset_color%}"
-
+ \
+%{$fg[white]%}[%*] $exit_code
+%{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"

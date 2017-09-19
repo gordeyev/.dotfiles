@@ -115,9 +115,8 @@ bureau_precmd () {
   print -rP "$_1LEFT$_1SPACES$_1RIGHT"
 }
 
-### input line $
 setopt prompt_subst
-PROMPT='$_LIBERTY '
+PROMPT='> $_LIBERTY '
 RPROMPT='$(nvm_prompt_info) $(bureau_git_prompt)'
 
 autoload -U add-zsh-hook
