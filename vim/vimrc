@@ -43,6 +43,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'junegunn/fzf'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'xuyuanp/nerdtree-git-plugin'
+NeoBundle 'ryanoasis/vim-devicons'
 call neobundle#end()
 
 " My Bundles here:
