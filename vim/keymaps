@@ -5,4 +5,5 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 map <C-n> :NERDTreeToggle<CR>
+map <C-p> :FZF <Enter>
 
