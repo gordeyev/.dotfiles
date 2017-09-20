@@ -37,6 +37,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 call neobundle#end()
 call neobundle#begin()
 NeoBundle 'myusuf3/numbers.vim'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'gordeyev/vim-hybrid'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'tpope/vim-fugitive'
@@ -78,6 +80,7 @@ let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
 set background=dark
 colorscheme hybrid
+let g:airline_theme='onedark'
 
 
 hi Normal ctermbg=none
