@@ -12,6 +12,6 @@ ln -s ~/.dotfiles/zshrc ~/.zshrc
 ```
 Copy vim config to home:
 ```bash
-ln -s ~/.dotfiles/vimrc ~/.vimrc
+ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 ```
 
