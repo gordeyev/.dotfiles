@@ -6,8 +6,7 @@ eval $(thefuck --alias)
 # You can use whatever you want as an alias, like for Mondays:
 eval $(thefuck --alias FUCK)
 
-tmux new-session -A -s main
-export ZSH=/Users/gordeyev/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 alias vi="nvim"
 export WORKON_HOME=$HOME/Envs
