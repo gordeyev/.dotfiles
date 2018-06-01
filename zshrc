@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# eval $(thefuck --alias)
+# brew install thefuck
 eval $(thefuck --alias FUCK)
 
 export ZSH=~/.oh-my-zsh
@@ -9,11 +9,13 @@ export ZSH=~/.oh-my-zsh
 alias vi="nvim"
 export WORKON_HOME=$HOME/Envs
 source /usr/local/bin/virtualenvwrapper.sh
-export DJANGO_SETTINGS_MODULE=swish_project.settings
+export DJANGO_SETTINGS_MODULE=django_project.settings
 
 ZSH_THEME="gordeyev"
 
 plugins=(git)
+
+# git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 plugins+=(zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
