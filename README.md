@@ -14,4 +14,7 @@ Copy vim config to home:
 ```bash
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 ```
-
+Copy theme to .oh-my-zsh/:
+```bash
+ln -s ~/.dotfiles/oh-my-zsh/themes/gordeyev.zsh-theme ~/.oh-my-zsh/themes
+```
