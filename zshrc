@@ -7,9 +7,10 @@ eval $(thefuck --alias FUCK)
 export ZSH=~/.oh-my-zsh
 
 alias vi="nvim"
-export WORKON_HOME=$HOME/Envs
-source /usr/local/bin/virtualenvwrapper.sh
-export DJANGO_SETTINGS_MODULE=django_project.local_settings
+
+# export WORKON_HOME=$HOME/Envs
+# source /usr/local/bin/virtualenvwrapper.sh
+# export DJANGO_SETTINGS_MODULE=django_project.local_settings
 
 ZSH_THEME="gordeyev"
 
