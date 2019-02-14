@@ -1,12 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# brew install thefuck
-eval $(thefuck --alias FUCK)
-
 export ZSH=~/.oh-my-zsh
 
 alias vi="nvim"
+alias chromium="open -a Chromium --args --disable-web-security --user-data-dir=\"/tmp/chrome_dev_session\""
 
 # export WORKON_HOME=$HOME/Envs
 # source /usr/local/bin/virtualenvwrapper.sh
@@ -24,7 +22,9 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
+# Tizen cli
 export PATH=$PATH:~/tizen-studio/tools
+export PATH=$PATH:~/tizen-studio/tools/ide/bin
 
 if which tmux 2>&1 >/dev/null; then
   if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
@@ -37,3 +37,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+
+eval $(thefuck --alias)
