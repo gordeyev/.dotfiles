@@ -4,7 +4,7 @@
 export ZSH=~/.oh-my-zsh
 
 alias vi="nvim"
-alias chromium="open -a Chromium --args --disable-web-security --user-data-dir=\"/tmp/chrome_dev_session\""
+alias chromium="open -a Chromium --args --disable-web-security --user-data-dir=\"/tmp/chrome_dev_session\" --test-type"
 
 # export WORKON_HOME=$HOME/Envs
 # source /usr/local/bin/virtualenvwrapper.sh
