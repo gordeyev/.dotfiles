@@ -4,8 +4,8 @@
 YS_VCS_PROMPT_PREFIX1=" %{$fg[white]%}on%{$reset_color%} "
 YS_VCS_PROMPT_PREFIX2=":%{$fg[cyan]%}"
 YS_VCS_PROMPT_SUFFIX="%{$reset_color%}"
-YS_VCS_PROMPT_DIRTY=" %{$fg[red]%}x"
-YS_VCS_PROMPT_CLEAN=" %{$fg[green]%}o"
+YS_VCS_PROMPT_DIRTY=" %{$fg[red]%}◉"
+YS_VCS_PROMPT_CLEAN=" %{$fg[green]%}◉"
 
 # Git info
 local git_info='$(git_prompt_info)'
@@ -57,9 +57,9 @@ ${git_info}\
 %{$terminfo[bold]\
 %{$reset_color%}\
 \
-$bg[black]$fg[green]%}$ \
+$fg[green]%}$\
 \
 %{$reset_color%}\
-%{$fg[black]%} \
+%{$fg[black]%} \
 %{$reset_color%}"
 
