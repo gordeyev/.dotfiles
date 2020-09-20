@@ -57,9 +57,6 @@ ${git_info}\
 %{$terminfo[bold]\
 %{$reset_color%}\
 \
-$fg[green]%}$\
-\
-%{$reset_color%}\
-%{$fg[black]%} \
+$fg[green]%}$ \
 %{$reset_color%}"
 
