@@ -6,25 +6,14 @@ export ZSH=~/.oh-my-zsh
 alias vi="nvim"
 alias chromium="open -a Chromium --args --disable-web-security --user-data-dir=\"/tmp/chrome_dev_session\" --test-type"
 
-# export WORKON_HOME=$HOME/Envs
-# source /usr/local/bin/virtualenvwrapper.sh
-# export DJANGO_SETTINGS_MODULE=django_project.local_settings
-
 ZSH_THEME="gordeyev"
 
 plugins=(git)
 
 # git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
-plugins+=(zsh-nvm)
+# plugins+=(zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-
-# Tizen cli
-export PATH=$PATH:~/tizen-studio/tools
-export PATH=$PATH:~/tizen-studio/tools/ide/bin
 
 if which tmux 2>&1 >/dev/null; then
   if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
@@ -39,3 +28,13 @@ export NVM_DIR="$HOME/.nvm"
 
 
 eval $(thefuck --alias)
+export PATH="/usr/local/opt/node@14/bin:$PATH"
+
+# export WORKON_HOME=$HOME/Envs
+# source /usr/local/bin/virtualenvwrapper.sh
+# export DJANGO_SETTINGS_MODULE=django_project.local_settings
+
+# Tizen cli
+# export PATH=$PATH:~/tizen-studio/tools
+# export PATH=$PATH:~/tizen-studio/tools/ide/bin
+
