@@ -7,12 +7,36 @@ YS_VCS_PROMPT_SUFFIX="%{$reset_color%}"
 YS_VCS_PROMPT_DIRTY=" %{$fg[red]%}●●●"
 YS_VCS_PROMPT_CLEAN=" %{$fg[green]%}●●●"
 
+function arc_prompt_info() {
+  local ROOT
+  local _DISPLAY
+
+  ROOT=$(arc root 2> /dev/null | head -1)
+
+  if [[ -n $ROOT ]]; then
+    _DISPLAY=$(arc info 2> /dev/null | egrep -o 'branch: (.*)' | awk '{print $2}')
+    echo "${YS_VCS_PROMPT_PREFIX1}arc${YS_VCS_PROMPT_PREFIX2}$_DISPLAY$(arc_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  fi
+}
+
+function arc_dirty() {
+  local STATUS=$(arc status -s 2> /dev/null | tail -1)
+  if [[ -n $STATUS ]]; then
+    echo "$ZSH_THEME_GIT_PROMPT_DIRTY"
+  else
+    echo "$ZSH_THEME_GIT_PROMPT_CLEAN"
+  fi
+}
 # Git info
 local git_info='$(git_prompt_info)'
 ZSH_THEME_GIT_PROMPT_PREFIX="${YS_VCS_PROMPT_PREFIX1}git${YS_VCS_PROMPT_PREFIX2}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="$YS_VCS_PROMPT_SUFFIX"
 ZSH_THEME_GIT_PROMPT_DIRTY="$YS_VCS_PROMPT_DIRTY"
 ZSH_THEME_GIT_PROMPT_CLEAN="$YS_VCS_PROMPT_CLEAN"
+
+# Arc info
+local arc_info='$(arc_prompt_info)'
+check_arc()
 
 # HG info
 local hg_info='$(ys_hg_prompt_info)'
@@ -49,6 +73,7 @@ PROMPT="
 %{$terminfo[bold]\
 %{$reset_color%}\
 $fg[yellow]%}%~%{$reset_color%}\
+${arc_info}\
 ${hg_info}\
 ${hg_info}\
 ${git_info}\

@@ -1,9 +1,11 @@
+fpath+=~/.zfunc
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export ZSH=~/.oh-my-zsh
 
 alias vi="nvim"
+alias jul="jupyter-lab"
 alias chromium="open -a Chromium --args --disable-web-security --user-data-dir=\"/tmp/chrome_dev_session\" --test-type"
 
 ZSH_THEME="gordeyev"
@@ -29,6 +31,7 @@ export NVM_DIR="$HOME/.nvm"
 
 eval $(thefuck --alias)
 export PATH="/usr/local/opt/node@14/bin:$PATH"
+export PATH="/usr/local/anaconda3/bin:$PATH"
 
 # export WORKON_HOME=$HOME/Envs
 # source /usr/local/bin/virtualenvwrapper.sh
@@ -37,4 +40,9 @@ export PATH="/usr/local/opt/node@14/bin:$PATH"
 # Tizen cli
 # export PATH=$PATH:~/tizen-studio/tools
 # export PATH=$PATH:~/tizen-studio/tools/ide/bin
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/sbin:$PATH"
+export ARC_EDITOR="nvim"
 
