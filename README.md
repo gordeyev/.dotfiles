@@ -1,3 +1,7 @@
+Copy zsh config to home:
+```bash
+ln -s ~/.dotfiles/zshrc ~/.zshrc
+```
 [Install Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -6,13 +10,13 @@ Copy tmux config to home:
 ```bash
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ```
+[Install tmux](https://github.com/tmux/tmux)
+```bash
+brew install tmux
+```
 Apply tmux config:
 ```bash
 tmux source-file ~/.tmux.conf
-```
-Copy zsh config to home:
-```bash
-ln -s ~/.dotfiles/zshrc ~/.zshrc
 ```
 Copy vim config to home:
 ```bash
@@ -25,10 +29,6 @@ ln -s ~/.dotfiles/oh-my-zsh/themes/gordeyev.zsh-theme ~/.oh-my-zsh/themes
 [Install Homebrew](https://brew.sh)
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-[Install tmux](https://github.com/tmux/tmux)
-```bash
-brew install tmux
 ```
 [Install The Fuck](https://github.com/nvbn/thefuck)
 ```bash
