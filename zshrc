@@ -1,6 +1,7 @@
 fpath+=~/.zfunc
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
 
 export ZSH=~/.oh-my-zsh
@@ -46,7 +47,9 @@ eval $(thefuck --alias)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PATH="/usr/local/sbin:$PATH"
-
 export ARC_EDITOR="nvim"
 
+
+export PNPM_HOME="/Users/gordeyev/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+export PATH="${HOME}/.pyenv/shims:${PATH}"
