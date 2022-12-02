@@ -18,3 +18,33 @@ Copy theme to .oh-my-zsh/:
 ```bash
 ln -s ~/.dotfiles/oh-my-zsh/themes/gordeyev.zsh-theme ~/.oh-my-zsh/themes
 ```
+[Install Homebrew](https://brew.sh)
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+[Install tmux](https://github.com/tmux/tmux)
+```bash
+brew install tmux
+```
+[Install The Fuck](https://github.com/nvbn/thefuck)
+```bash
+brew install thefuck
+```
+[Install neovim](https://github.com/neovim/neovim)
+```bash
+brew install neovim
+```
+[Install fzf](https://github.com/junegunn/fzf)
+```bash
+brew install fzf
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
+```
+[Install Simple Python Version Management: pyenv](https://github.com/pyenv/pyenv)
+```bash
+brew install pyenv
+```
+[Install Stats](https://github.com/exelban/stats)
+```bash
+brew install stats
+```
