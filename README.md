@@ -6,6 +6,10 @@ ln -s ~/.dotfiles/zshrc ~/.zshrc
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+[Install nvm](https://github.com/lukechilds/zsh-nvm)
+```bash
+git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+```
 Copy tmux config to home:
 ```bash
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
