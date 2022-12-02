@@ -1,3 +1,7 @@
+[Install Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 Copy tmux config to home:
 ```bash
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
