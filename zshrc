@@ -52,4 +52,8 @@ export ARC_EDITOR="nvim"
 
 export PNPM_HOME="/Users/gordeyev/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+
 export PATH="${HOME}/.pyenv/shims:${PATH}"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
